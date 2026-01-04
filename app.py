@@ -177,7 +177,7 @@ if choice == "Scrape data":
     if category != "Select a category":
         url = urls[category]
         if category == "Poules - Lapins - Pigeons" :
-            st.warning("Ce scrapping prend un peu de temps; veuillez patienter...")
+            st.warning("This scraping takes some time; please be patient or reduce the number of pages to scrap (eg: 2)...")
             df = scrape_animals_details(url, pages)
         else :
             df = scrape_animals(url, pages)
@@ -228,8 +228,6 @@ elif choice == "Data dashboard":
     )
 
     if category != "Select a category":
-        # fait une fois pour nettoyer les données
-
         if category == "Chiens":
             file_raw = "coinafrique_chiens_data.csv"
         elif category == "Moutons":
